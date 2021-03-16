@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		524F87882600D138007F339A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87872600D138007F339A /* AppDelegate.swift */; };
+		524F878A2600D138007F339A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87892600D138007F339A /* SceneDelegate.swift */; };
+		524F878C2600D138007F339A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F878B2600D138007F339A /* ViewController.swift */; };
+		524F878F2600D138007F339A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524F878D2600D138007F339A /* Main.storyboard */; };
+		524F87912600D13C007F339A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524F87902600D13C007F339A /* Assets.xcassets */; };
+		524F87942600D13C007F339A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524F87922600D13C007F339A /* LaunchScreen.storyboard */; };
+		524F879F2600D13C007F339A /* VirginMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F879E2600D13C007F339A /* VirginMoneyTests.swift */; };
+		524F87AA2600D13C007F339A /* VirginMoneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87A92600D13C007F339A /* VirginMoneyUITests.swift */; };
+		524F87BB2600D15A007F339A /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87BA2600D15A007F339A /* Comments.swift */; };
+		524F87C82600D3D9007F339A /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87C72600D3D9007F339A /* Error.swift */; };
+		524F87CD2600D407007F339A /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87CC2600D407007F339A /* WebService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		524F879B2600D13C007F339A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 524F877C2600D138007F339A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 524F87832600D138007F339A;
+			remoteInfo = VirginMoney;
+		};
+		524F87A62600D13C007F339A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 524F877C2600D138007F339A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 524F87832600D138007F339A;
+			remoteInfo = VirginMoney;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		524F87842600D138007F339A /* VirginMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirginMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		524F87872600D138007F339A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		524F87892600D138007F339A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		524F878B2600D138007F339A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		524F878E2600D138007F339A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		524F87902600D13C007F339A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		524F87932600D13C007F339A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		524F87952600D13C007F339A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		524F879A2600D13C007F339A /* VirginMoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VirginMoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		524F879E2600D13C007F339A /* VirginMoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirginMoneyTests.swift; sourceTree = "<group>"; };
+		524F87A02600D13C007F339A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		524F87A52600D13C007F339A /* VirginMoneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VirginMoneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		524F87A92600D13C007F339A /* VirginMoneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirginMoneyUITests.swift; sourceTree = "<group>"; };
+		524F87AB2600D13C007F339A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		524F87BA2600D15A007F339A /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
+		524F87C72600D3D9007F339A /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		524F87CC2600D407007F339A /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		524F87812600D138007F339A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		524F87972600D13C007F339A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		524F87A22600D13C007F339A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		524F877B2600D137007F339A = {
+			isa = PBXGroup;
+			children = (
+				524F87862600D138007F339A /* VirginMoney */,
+				524F879D2600D13C007F339A /* VirginMoneyTests */,
+				524F87A82600D13C007F339A /* VirginMoneyUITests */,
+				524F87852600D138007F339A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		524F87852600D138007F339A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				524F87842600D138007F339A /* VirginMoney.app */,
+				524F879A2600D13C007F339A /* VirginMoneyTests.xctest */,
+				524F87A52600D13C007F339A /* VirginMoneyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		524F87862600D138007F339A /* VirginMoney */ = {
+			isa = PBXGroup;
+			children = (
+				524F87C32600D3A2007F339A /* Networking */,
+				524F87BF2600D297007F339A /* Model */,
+				524F87872600D138007F339A /* AppDelegate.swift */,
+				524F87892600D138007F339A /* SceneDelegate.swift */,
+				524F878B2600D138007F339A /* ViewController.swift */,
+				524F878D2600D138007F339A /* Main.storyboard */,
+				524F87902600D13C007F339A /* Assets.xcassets */,
+				524F87922600D13C007F339A /* LaunchScreen.storyboard */,
+				524F87952600D13C007F339A /* Info.plist */,
+			);
+			path = VirginMoney;
+			sourceTree = "<group>";
+		};
+		524F879D2600D13C007F339A /* VirginMoneyTests */ = {
+			isa = PBXGroup;
+			children = (
+				524F879E2600D13C007F339A /* VirginMoneyTests.swift */,
+				524F87A02600D13C007F339A /* Info.plist */,
+			);
+			path = VirginMoneyTests;
+			sourceTree = "<group>";
+		};
+		524F87A82600D13C007F339A /* VirginMoneyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				524F87A92600D13C007F339A /* VirginMoneyUITests.swift */,
+				524F87AB2600D13C007F339A /* Info.plist */,
+			);
+			path = VirginMoneyUITests;
+			sourceTree = "<group>";
+		};
+		524F87BF2600D297007F339A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				524F87BA2600D15A007F339A /* Comments.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		524F87C32600D3A2007F339A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				524F87C72600D3D9007F339A /* Error.swift */,
+				524F87CC2600D407007F339A /* WebService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		524F87832600D138007F339A /* VirginMoney */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 524F87AE2600D13C007F339A /* Build configuration list for PBXNativeTarget "VirginMoney" */;
+			buildPhases = (
+				524F87802600D138007F339A /* Sources */,
+				524F87812600D138007F339A /* Frameworks */,
+				524F87822600D138007F339A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VirginMoney;
+			productName = VirginMoney;
+			productReference = 524F87842600D138007F339A /* VirginMoney.app */;
+			productType = "com.apple.product-type.application";
+		};
+		524F87992600D13C007F339A /* VirginMoneyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 524F87B12600D13C007F339A /* Build configuration list for PBXNativeTarget "VirginMoneyTests" */;
+			buildPhases = (
+				524F87962600D13C007F339A /* Sources */,
+				524F87972600D13C007F339A /* Frameworks */,
+				524F87982600D13C007F339A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				524F879C2600D13C007F339A /* PBXTargetDependency */,
+			);
+			name = VirginMoneyTests;
+			productName = VirginMoneyTests;
+			productReference = 524F879A2600D13C007F339A /* VirginMoneyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		524F87A42600D13C007F339A /* VirginMoneyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 524F87B42600D13C007F339A /* Build configuration list for PBXNativeTarget "VirginMoneyUITests" */;
+			buildPhases = (
+				524F87A12600D13C007F339A /* Sources */,
+				524F87A22600D13C007F339A /* Frameworks */,
+				524F87A32600D13C007F339A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				524F87A72600D13C007F339A /* PBXTargetDependency */,
+			);
+			name = VirginMoneyUITests;
+			productName = VirginMoneyUITests;
+			productReference = 524F87A52600D13C007F339A /* VirginMoneyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		524F877C2600D138007F339A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					524F87832600D138007F339A = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					524F87992600D13C007F339A = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 524F87832600D138007F339A;
+					};
+					524F87A42600D13C007F339A = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 524F87832600D138007F339A;
+					};
+				};
+			};
+			buildConfigurationList = 524F877F2600D138007F339A /* Build configuration list for PBXProject "VirginMoney" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 524F877B2600D137007F339A;
+			productRefGroup = 524F87852600D138007F339A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				524F87832600D138007F339A /* VirginMoney */,
+				524F87992600D13C007F339A /* VirginMoneyTests */,
+				524F87A42600D13C007F339A /* VirginMoneyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		524F87822600D138007F339A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524F87942600D13C007F339A /* LaunchScreen.storyboard in Resources */,
+				524F87912600D13C007F339A /* Assets.xcassets in Resources */,
+				524F878F2600D138007F339A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		524F87982600D13C007F339A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		524F87A32600D13C007F339A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		524F87802600D138007F339A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524F87CD2600D407007F339A /* WebService.swift in Sources */,
+				524F878C2600D138007F339A /* ViewController.swift in Sources */,
+				524F87882600D138007F339A /* AppDelegate.swift in Sources */,
+				524F878A2600D138007F339A /* SceneDelegate.swift in Sources */,
+				524F87C82600D3D9007F339A /* Error.swift in Sources */,
+				524F87BB2600D15A007F339A /* Comments.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		524F87962600D13C007F339A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524F879F2600D13C007F339A /* VirginMoneyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		524F87A12600D13C007F339A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				524F87AA2600D13C007F339A /* VirginMoneyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		524F879C2600D13C007F339A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 524F87832600D138007F339A /* VirginMoney */;
+			targetProxy = 524F879B2600D13C007F339A /* PBXContainerItemProxy */;
+		};
+		524F87A72600D13C007F339A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 524F87832600D138007F339A /* VirginMoney */;
+			targetProxy = 524F87A62600D13C007F339A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		524F878D2600D138007F339A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				524F878E2600D138007F339A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		524F87922600D13C007F339A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				524F87932600D13C007F339A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		524F87AC2600D13C007F339A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		524F87AD2600D13C007F339A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		524F87AF2600D13C007F339A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VirginMoney/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.huseyinYolasigmazoglu.VirginMoney;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		524F87B02600D13C007F339A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VirginMoney/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.huseyinYolasigmazoglu.VirginMoney;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		524F87B22600D13C007F339A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VirginMoneyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.huseyinYolasigmazoglu.VirginMoneyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VirginMoney.app/VirginMoney";
+			};
+			name = Debug;
+		};
+		524F87B32600D13C007F339A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VirginMoneyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.huseyinYolasigmazoglu.VirginMoneyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VirginMoney.app/VirginMoney";
+			};
+			name = Release;
+		};
+		524F87B52600D13C007F339A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VirginMoneyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.huseyinYolasigmazoglu.VirginMoneyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VirginMoney;
+			};
+			name = Debug;
+		};
+		524F87B62600D13C007F339A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VirginMoneyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.huseyinYolasigmazoglu.VirginMoneyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VirginMoney;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		524F877F2600D138007F339A /* Build configuration list for PBXProject "VirginMoney" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				524F87AC2600D13C007F339A /* Debug */,
+				524F87AD2600D13C007F339A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		524F87AE2600D13C007F339A /* Build configuration list for PBXNativeTarget "VirginMoney" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				524F87AF2600D13C007F339A /* Debug */,
+				524F87B02600D13C007F339A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		524F87B12600D13C007F339A /* Build configuration list for PBXNativeTarget "VirginMoneyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				524F87B22600D13C007F339A /* Debug */,
+				524F87B32600D13C007F339A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		524F87B42600D13C007F339A /* Build configuration list for PBXNativeTarget "VirginMoneyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				524F87B52600D13C007F339A /* Debug */,
+				524F87B62600D13C007F339A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 524F877C2600D138007F339A /* Project object */;
+}
