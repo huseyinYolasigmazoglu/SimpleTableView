@@ -39,16 +39,17 @@ final class Webservice : IWebservice {
             
             if let response = response as? HTTPURLResponse {
                 
-                print("response.statusCode \(response.statusCode )")
                 if response.statusCode != 200 {
                     completion(.failure(.serverError(description:"Server error" )))
                 } else{
                     
                     if let data = data {
+                        
                         DispatchQueue.main.async {
                             completion(resource.parse(data))
                         }
                         return
+                        
                     } else {
                         DispatchQueue.main.async {
                             completion(.failure(.networkError(description:"internal Error")))

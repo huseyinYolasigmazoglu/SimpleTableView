@@ -12,8 +12,43 @@ final class MainViewController: UIViewController,UITableViewDelegate {
     
     @IBOutlet private weak var tableView: UITableView!
     
+    private var _service : IService?
+    private var _webService :  IWebservice?
+
+    
+    var webService :  IWebservice {
+        set{
+            _webService = newValue
+        }
+        get{
+            if let service = _webService {
+                return service
+            }else{
+                return Webservice()
+            }
+        }
+    }
+    
+    var service : IService {
+        
+        set{
+            _service = newValue
+        }
+        get{
+            if  let service = _service {
+                return service
+            }else{
+                return Service(webService)
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureViewController()
+    }
+    func configureViewController()  {
         
         tableView.delegate = self
         tableView.dataSource = self

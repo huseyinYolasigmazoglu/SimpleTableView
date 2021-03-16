@@ -21,7 +21,7 @@ import Foundation
 //https://jsonplaceholder.typicode.com/posts/1/comments
 
 
-struct Comments: Codable {
+struct Comment: Codable {
     
     let postId : Int?
     let id : Int?

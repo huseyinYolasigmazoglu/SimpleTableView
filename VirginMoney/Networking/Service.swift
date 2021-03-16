@@ -11,7 +11,7 @@ import Foundation
 protocol IService {
     
     var baseEndPoint : String { get set }
-    func getAllPokemons(hp:String,completion: @escaping (Result<Comments?, NetworkError>) -> ())
+    func getAllComments(completion: @escaping (Result<[Comment], NetworkError>) -> ())
 }
 
 final class Service: IService {
@@ -25,7 +25,7 @@ final class Service: IService {
         self.baseEndPoint = base
     }
     
-    func getAllPokemons(hp:String,completion: @escaping (Result<Comments?, NetworkError>) -> ()) {
+    func getAllComments(completion: @escaping (Result<[Comment], NetworkError>) -> ()) {
         
         webService.load(resource()) { (result) in
             
@@ -36,14 +36,13 @@ final class Service: IService {
         }
     }
     
-    func resource() -> Resource<Comments?> {
+    func resource() -> Resource<[Comment]> {
         
-        return Resource<Comments?>( url: URL(string: baseEndPoint))  { data in
+        return Resource<[Comment]>( url: URL(string: baseEndPoint))  { data in
             
-            guard let result = try? JSONDecoder().decode(Comments.self, from: data) else {
+            guard let result = try? JSONDecoder().decode([Comment].self, from: data) else {
                 return .failure(.decodingError(description: "json decode internal error"))
             }
-            
             return .success(result)
         }
     }

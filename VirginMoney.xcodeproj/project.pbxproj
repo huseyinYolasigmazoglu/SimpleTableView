@@ -15,11 +15,13 @@
 		524F87942600D13C007F339A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524F87922600D13C007F339A /* LaunchScreen.storyboard */; };
 		524F879F2600D13C007F339A /* VirginMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F879E2600D13C007F339A /* VirginMoneyTests.swift */; };
 		524F87AA2600D13C007F339A /* VirginMoneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87A92600D13C007F339A /* VirginMoneyUITests.swift */; };
-		524F87BB2600D15A007F339A /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87BA2600D15A007F339A /* Comments.swift */; };
+		524F87BB2600D15A007F339A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87BA2600D15A007F339A /* Comment.swift */; };
 		524F87C82600D3D9007F339A /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87C72600D3D9007F339A /* Error.swift */; };
 		524F87CD2600D407007F339A /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87CC2600D407007F339A /* WebService.swift */; };
 		524F87D32601399F007F339A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87D22601399F007F339A /* Constants.swift */; };
 		524F87DB26013A38007F339A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87DA26013A38007F339A /* Service.swift */; };
+		524F87EE260142B2007F339A /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87ED260142B2007F339A /* CommentViewModel.swift */; };
+		524F87F9260143E4007F339A /* CommentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87F8260143E4007F339A /* CommentListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,11 +56,13 @@
 		524F87A52600D13C007F339A /* VirginMoneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VirginMoneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		524F87A92600D13C007F339A /* VirginMoneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirginMoneyUITests.swift; sourceTree = "<group>"; };
 		524F87AB2600D13C007F339A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		524F87BA2600D15A007F339A /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
+		524F87BA2600D15A007F339A /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		524F87C72600D3D9007F339A /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		524F87CC2600D407007F339A /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		524F87D22601399F007F339A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		524F87DA26013A38007F339A /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		524F87ED260142B2007F339A /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
+		524F87F8260143E4007F339A /* CommentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 		524F87862600D138007F339A /* VirginMoney */ = {
 			isa = PBXGroup;
 			children = (
+				524F87EC26014214007F339A /* ViewModel */,
 				524F87872600D138007F339A /* AppDelegate.swift */,
 				524F87892600D138007F339A /* SceneDelegate.swift */,
 				524F87E8260140B8007F339A /* View */,
@@ -143,7 +148,7 @@
 		524F87BF2600D297007F339A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				524F87BA2600D15A007F339A /* Comments.swift */,
+				524F87BA2600D15A007F339A /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +186,15 @@
 				524F87922600D13C007F339A /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		524F87EC26014214007F339A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				524F87ED260142B2007F339A /* CommentViewModel.swift */,
+				524F87F8260143E4007F339A /* CommentListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,14 +327,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				524F87EE260142B2007F339A /* CommentViewModel.swift in Sources */,
 				524F87CD2600D407007F339A /* WebService.swift in Sources */,
+				524F87F9260143E4007F339A /* CommentListViewModel.swift in Sources */,
 				524F87DB26013A38007F339A /* Service.swift in Sources */,
 				524F878C2600D138007F339A /* MainViewController.swift in Sources */,
 				524F87882600D138007F339A /* AppDelegate.swift in Sources */,
 				524F878A2600D138007F339A /* SceneDelegate.swift in Sources */,
 				524F87D32601399F007F339A /* Constants.swift in Sources */,
 				524F87C82600D3D9007F339A /* Error.swift in Sources */,
-				524F87BB2600D15A007F339A /* Comments.swift in Sources */,
+				524F87BB2600D15A007F339A /* Comment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
