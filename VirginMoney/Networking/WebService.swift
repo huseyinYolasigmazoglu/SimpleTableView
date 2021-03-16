@@ -42,8 +42,7 @@ final class Webservice : IWebservice {
                 print("response.statusCode \(response.statusCode )")
                 if response.statusCode != 200 {
                     completion(.failure(.serverError(description:"Server error" )))
-                }
-                else {
+                } else{
                     
                     if let data = data {
                         DispatchQueue.main.async {
@@ -58,8 +57,6 @@ final class Webservice : IWebservice {
                     }
                 }
             }
-            
         }.resume()
-        
     }
 }

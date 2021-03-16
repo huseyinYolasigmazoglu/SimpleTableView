@@ -18,6 +18,8 @@
 		524F87BB2600D15A007F339A /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87BA2600D15A007F339A /* Comments.swift */; };
 		524F87C82600D3D9007F339A /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87C72600D3D9007F339A /* Error.swift */; };
 		524F87CD2600D407007F339A /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87CC2600D407007F339A /* WebService.swift */; };
+		524F87D32601399F007F339A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87D22601399F007F339A /* Constants.swift */; };
+		524F87DB26013A38007F339A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87DA26013A38007F339A /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		524F87BA2600D15A007F339A /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
 		524F87C72600D3D9007F339A /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		524F87CC2600D407007F339A /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		524F87D22601399F007F339A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		524F87DA26013A38007F339A /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		524F87862600D138007F339A /* VirginMoney */ = {
 			isa = PBXGroup;
 			children = (
+				524F87D126013971007F339A /* Utulity */,
 				524F87C32600D3A2007F339A /* Networking */,
 				524F87BF2600D297007F339A /* Model */,
 				524F87872600D138007F339A /* AppDelegate.swift */,
@@ -149,8 +154,17 @@
 			children = (
 				524F87C72600D3D9007F339A /* Error.swift */,
 				524F87CC2600D407007F339A /* WebService.swift */,
+				524F87DA26013A38007F339A /* Service.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		524F87D126013971007F339A /* Utulity */ = {
+			isa = PBXGroup;
+			children = (
+				524F87D22601399F007F339A /* Constants.swift */,
+			);
+			path = Utulity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,9 +298,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				524F87CD2600D407007F339A /* WebService.swift in Sources */,
+				524F87DB26013A38007F339A /* Service.swift in Sources */,
 				524F878C2600D138007F339A /* ViewController.swift in Sources */,
 				524F87882600D138007F339A /* AppDelegate.swift in Sources */,
 				524F878A2600D138007F339A /* SceneDelegate.swift in Sources */,
+				524F87D32601399F007F339A /* Constants.swift in Sources */,
 				524F87C82600D3D9007F339A /* Error.swift in Sources */,
 				524F87BB2600D15A007F339A /* Comments.swift in Sources */,
 			);
