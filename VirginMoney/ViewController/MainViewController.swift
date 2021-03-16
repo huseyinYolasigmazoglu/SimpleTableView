@@ -14,8 +14,9 @@ final class MainViewController: UIViewController,UITableViewDelegate {
     
     private var _service : IService?
     private var _webService :  IWebservice?
-
+    private var commentListVM : CommentListViewModel?
     
+    //below property can be set from outside class, to help Dependency Injection
     var webService :  IWebservice {
         set{
             _webService = newValue
@@ -24,11 +25,12 @@ final class MainViewController: UIViewController,UITableViewDelegate {
             if let service = _webService {
                 return service
             }else{
-                return Webservice()
+                return Webservice() //if nil default value
             }
         }
     }
     
+    //below property can be set from outside class, to help Dependency Injection
     var service : IService {
         
         set{
@@ -38,7 +40,7 @@ final class MainViewController: UIViewController,UITableViewDelegate {
             if  let service = _service {
                 return service
             }else{
-                return Service(webService)
+                return Service(webService) //if nil default value
             }
         }
     }
@@ -52,6 +54,9 @@ final class MainViewController: UIViewController,UITableViewDelegate {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        commentListVM = CommentListViewModel(service)
+        commentListVM?.delegate = self
     }
     
 }
@@ -60,16 +65,26 @@ extension MainViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 5
+        return commentListVM?.numberOfComments() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell()
-        cell.textLabel?.text = "1"
+        
+        cell.textLabel?.text = commentListVM?.commentIndex(indexPath.row)?.name()
         
         return cell
     }
+}
+
+extension MainViewController:CommentListViewModelDelegate {
+    
+    func refresh() {
+        
+        tableView.reloadData()
+    }
+    
 }
 
 
