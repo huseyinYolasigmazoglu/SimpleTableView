@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		524F87882600D138007F339A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87872600D138007F339A /* AppDelegate.swift */; };
 		524F878A2600D138007F339A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87892600D138007F339A /* SceneDelegate.swift */; };
-		524F878C2600D138007F339A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F878B2600D138007F339A /* ViewController.swift */; };
+		524F878C2600D138007F339A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F878B2600D138007F339A /* MainViewController.swift */; };
 		524F878F2600D138007F339A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524F878D2600D138007F339A /* Main.storyboard */; };
 		524F87912600D13C007F339A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524F87902600D13C007F339A /* Assets.xcassets */; };
 		524F87942600D13C007F339A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524F87922600D13C007F339A /* LaunchScreen.storyboard */; };
@@ -43,7 +43,7 @@
 		524F87842600D138007F339A /* VirginMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirginMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		524F87872600D138007F339A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		524F87892600D138007F339A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		524F878B2600D138007F339A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		524F878B2600D138007F339A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		524F878E2600D138007F339A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		524F87902600D13C007F339A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		524F87932600D13C007F339A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,15 +109,14 @@
 		524F87862600D138007F339A /* VirginMoney */ = {
 			isa = PBXGroup;
 			children = (
+				524F87872600D138007F339A /* AppDelegate.swift */,
+				524F87892600D138007F339A /* SceneDelegate.swift */,
+				524F87E8260140B8007F339A /* View */,
+				524F87DF26013CAE007F339A /* ViewController */,
 				524F87D126013971007F339A /* Utulity */,
 				524F87C32600D3A2007F339A /* Networking */,
 				524F87BF2600D297007F339A /* Model */,
-				524F87872600D138007F339A /* AppDelegate.swift */,
-				524F87892600D138007F339A /* SceneDelegate.swift */,
-				524F878B2600D138007F339A /* ViewController.swift */,
-				524F878D2600D138007F339A /* Main.storyboard */,
 				524F87902600D13C007F339A /* Assets.xcassets */,
-				524F87922600D13C007F339A /* LaunchScreen.storyboard */,
 				524F87952600D13C007F339A /* Info.plist */,
 			);
 			path = VirginMoney;
@@ -165,6 +164,23 @@
 				524F87D22601399F007F339A /* Constants.swift */,
 			);
 			path = Utulity;
+			sourceTree = "<group>";
+		};
+		524F87DF26013CAE007F339A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				524F878B2600D138007F339A /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		524F87E8260140B8007F339A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				524F878D2600D138007F339A /* Main.storyboard */,
+				524F87922600D13C007F339A /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,7 +315,7 @@
 			files = (
 				524F87CD2600D407007F339A /* WebService.swift in Sources */,
 				524F87DB26013A38007F339A /* Service.swift in Sources */,
-				524F878C2600D138007F339A /* ViewController.swift in Sources */,
+				524F878C2600D138007F339A /* MainViewController.swift in Sources */,
 				524F87882600D138007F339A /* AppDelegate.swift in Sources */,
 				524F878A2600D138007F339A /* SceneDelegate.swift in Sources */,
 				524F87D32601399F007F339A /* Constants.swift in Sources */,
