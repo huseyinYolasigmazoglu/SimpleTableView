@@ -7,23 +7,28 @@
 
 import Foundation
 
-protocol CommentListViewModelDelegate : class {
+protocol ListViewModelDelegate : class {
     func refresh()
 }
 
-class CommentListViewModel : CommentListViewModelDelegate {
+protocol ListViewModel : ListViewModelDelegate {
+    var service:IService { get set }
+    var delegate:ListViewModelDelegate? { get set }
+    func numberOfItems() -> Int
+    func commentIndex(_ index:Int) -> CellViewModel?
+}
+
+class CommentListViewModel : ListViewModel {
     
-    private var comments : [Comment]?
     private var commentsViewModel : [CommentViewModel]?
-    private var service:IService
+    var service:IService
     
-    weak var delegate:CommentListViewModelDelegate?
+    weak var delegate:ListViewModelDelegate?
     
     init(_ service:IService) {
         
         self.service = service
         fetchData()
-        
     }
     
     func refresh()  {
@@ -43,7 +48,6 @@ class CommentListViewModel : CommentListViewModelDelegate {
                 print("Error")
             }
         }
-        
     }
     private func initViewModelList(_ comments:[Comment]){
         
@@ -52,12 +56,12 @@ class CommentListViewModel : CommentListViewModelDelegate {
         }
     }
     
-    func numberOfComments() -> Int{
+    func numberOfItems() -> Int {
         
         return commentsViewModel?.count ?? 0
     }
     
-    func commentIndex(_ index:Int) -> CommentViewModel? {
+    func commentIndex(_ index:Int) -> CellViewModel? {
         
         return commentsViewModel?[index]
     }

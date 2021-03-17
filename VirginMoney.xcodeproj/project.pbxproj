@@ -22,6 +22,7 @@
 		524F87DB26013A38007F339A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87DA26013A38007F339A /* Service.swift */; };
 		524F87EE260142B2007F339A /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87ED260142B2007F339A /* CommentViewModel.swift */; };
 		524F87F9260143E4007F339A /* CommentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87F8260143E4007F339A /* CommentListViewModel.swift */; };
+		52E7618F2601E28200D543C0 /* DenemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7618E2601E28200D543C0 /* DenemeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		524F87DA26013A38007F339A /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		524F87ED260142B2007F339A /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		524F87F8260143E4007F339A /* CommentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListViewModel.swift; sourceTree = "<group>"; };
+		52E7618E2601E28200D543C0 /* DenemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenemeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				524F878B2600D138007F339A /* MainViewController.swift */,
+				52E7618E2601E28200D543C0 /* DenemeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E7618F2601E28200D543C0 /* DenemeViewController.swift in Sources */,
 				524F87EE260142B2007F339A /* CommentViewModel.swift in Sources */,
 				524F87CD2600D407007F339A /* WebService.swift in Sources */,
 				524F87F9260143E4007F339A /* CommentListViewModel.swift in Sources */,

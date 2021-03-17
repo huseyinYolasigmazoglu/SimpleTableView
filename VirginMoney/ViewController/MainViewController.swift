@@ -14,7 +14,7 @@ final class MainViewController: UIViewController,UITableViewDelegate {
     
     private var _service : IService?
     private var _webService :  IWebservice?
-    private var commentListVM : CommentListViewModel?
+    var commentListVM : ListViewModel?
     
     //below property can be set from outside class, to help Dependency Injection
     var webService :  IWebservice {
@@ -45,6 +45,9 @@ final class MainViewController: UIViewController,UITableViewDelegate {
         }
     }
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,8 +58,11 @@ final class MainViewController: UIViewController,UITableViewDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         
-        commentListVM = CommentListViewModel(service)
+        if commentListVM == nil { //give a default value if nil
+            commentListVM = CommentListViewModel(service)
+        }
         commentListVM?.delegate = self
+        
     }
     
 }
@@ -65,7 +71,7 @@ extension MainViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return commentListVM?.numberOfComments() ?? 0
+        return commentListVM?.numberOfItems() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -78,13 +84,11 @@ extension MainViewController : UITableViewDataSource {
     }
 }
 
-extension MainViewController:CommentListViewModelDelegate {
+extension MainViewController:ListViewModelDelegate {
     
     func refresh() {
-        
         tableView.reloadData()
     }
-    
 }
 
 

@@ -7,7 +7,14 @@
 
 import Foundation
 
-struct CommentViewModel {
+protocol CellViewModel {
+    
+    func name() -> String
+    func email() -> String
+}
+
+
+struct CommentViewModel : CellViewModel {
     
     private var comment : Comment
     
@@ -20,4 +27,9 @@ struct CommentViewModel {
         
         return comment.name ?? ""
     }
+    
+    func email() -> String {
+        return comment.email ?? ""
+    }
+    
 }
