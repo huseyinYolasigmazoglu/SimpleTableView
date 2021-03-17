@@ -8,5 +8,13 @@
 import Foundation
 
 struct EndPoint {
-     static var testUrl = "https://jsonplaceholder.typicode.com/posts/1/comments"
+    
+    static var testUrl = "https://jsonplaceholder.typicode.com/posts/1/comments"
+    
+    
+}
+
+struct Constants {
+    
+    static var gotoDetailsSegue = "gotoDetailsSegue"
 }

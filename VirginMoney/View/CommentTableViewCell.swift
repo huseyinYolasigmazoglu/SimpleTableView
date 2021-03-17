@@ -7,22 +7,20 @@
 
 import UIKit
 
-class CommentTableViewCell: UITableViewCell {
-
- 
-    @IBOutlet weak var name: UILabel!
+final class CommentTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var email: UILabel!
     
-    @IBOutlet weak var comment: UILabel!
+    @IBOutlet private weak var name: UILabel!
+    @IBOutlet private weak var email: UILabel!
+    @IBOutlet private weak var comment: UILabel!
     
     func configure(_ cell:CellViewModel?)  {
         
         if let cell = cell {
-            name.text = cell.name()
-            email.text = cell.email()
-            comment.text = cell.theComment()
+            name.attributedText = cell.name()
+            email.attributedText = cell.email()
+            comment.attributedText = cell.firstLineOfComment()
         }
     }
-        
+    
 }

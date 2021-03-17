@@ -18,7 +18,7 @@ protocol ListViewModel : ListViewModelDelegate {
     func commentIndex(_ index:Int) -> CellViewModel?
 }
 
-class CommentListViewModel : ListViewModel {
+final class CommentListViewModel : ListViewModel {
     
     private var commentsViewModel : [CommentViewModel]?
     var service:IService

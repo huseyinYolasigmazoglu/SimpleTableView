@@ -9,13 +9,14 @@ import Foundation
 
 protocol CellViewModel {
     
-    func name() -> String
-    func email() -> String
-    func theComment() -> String
+    func name() -> NSAttributedString
+    func email() -> NSAttributedString
+    func fullComment() -> NSAttributedString
+    func firstLineOfComment() -> NSAttributedString
 }
 
 
-struct CommentViewModel : CellViewModel {
+final class CommentViewModel : CellViewModel {
     
     private var comment : Comment
     
@@ -24,17 +25,26 @@ struct CommentViewModel : CellViewModel {
         self.comment = comment
     }
     
-    func name() -> String {
+    func name() -> NSAttributedString {
         
-        return comment.name ?? ""
+        let name = "NAME:"
+        return "\(name) \(comment.name ?? "")".withBoldText(text: name)
     }
     
-    func email() -> String {
-        return comment.email ?? ""
-    }
-    func theComment() -> String {
+    func email() -> NSAttributedString {
         
-        return comment.comment ?? ""
+        let email = "EMAIL:"
+        return "\(email) \(comment.email ?? "")".withBoldText(text: email)
+        
     }
-    
+    func fullComment() -> NSAttributedString {
+        
+        let com = "COMMENT:"
+        return "\(com) \(comment.comment ?? "")".withBoldText(text: com)
+    }
+    func firstLineOfComment() -> NSAttributedString {
+        
+        let com = "COMMENT:"
+        return "\(com) \(comment.comment?.stringBefore("\n") ?? "")".withBoldText(text: com)
+    }
 }

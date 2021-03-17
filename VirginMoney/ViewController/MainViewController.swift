@@ -51,20 +51,35 @@ final class MainViewController: UIViewController,UITableViewDelegate {
         
         configureViewController()
     }
+    
     func configureViewController()  {
         
         tableView.delegate = self
         tableView.dataSource = self
         
-        if commentListVM == nil { //give a default value if nil
+        if commentListVM == nil { //give a default if  value if nil
             commentListVM = CommentListViewModel(service)
         }
         commentListVM?.delegate = self
         tableView.tableFooterView = UIView()
         
-        //tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 185
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        if let identifier = segue.identifier {
+            
+            if identifier == Constants.gotoDetailsSegue {
+                
+                if let destinationViewController = segue.destination as? DetailViewController {
+                    
+                    if let index = sender as? IndexPath {
+                        
+                        destinationViewController.detail = commentListVM?.commentIndex(index.row)
+                    }
+                }
+            }
+        }
     }
     
 }
@@ -86,6 +101,11 @@ extension MainViewController : UITableViewDataSource {
         cell.configure(commentListVM?.commentIndex(indexPath.row) )
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: Constants.gotoDetailsSegue, sender: indexPath)
     }
 }
 
