@@ -19,10 +19,13 @@
 		524F87C82600D3D9007F339A /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87C72600D3D9007F339A /* Error.swift */; };
 		524F87CD2600D407007F339A /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87CC2600D407007F339A /* WebService.swift */; };
 		524F87D32601399F007F339A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87D22601399F007F339A /* Constants.swift */; };
-		524F87DB26013A38007F339A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87DA26013A38007F339A /* Service.swift */; };
+		524F87DB26013A38007F339A /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87DA26013A38007F339A /* CommentService.swift */; };
 		524F87EE260142B2007F339A /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87ED260142B2007F339A /* CommentViewModel.swift */; };
 		524F87F9260143E4007F339A /* CommentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F87F8260143E4007F339A /* CommentListViewModel.swift */; };
-		52E7618F2601E28200D543C0 /* DenemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7618E2601E28200D543C0 /* DenemeViewController.swift */; };
+		52E7618F2601E28200D543C0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7618E2601E28200D543C0 /* DetailViewController.swift */; };
+		52E761DE2601F33900D543C0 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E761DD2601F33900D543C0 /* CommentTableViewCell.swift */; };
+		52E76228260230BC00D543C0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E76227260230BC00D543C0 /* String+Extension.swift */; };
+		52E762332602474600D543C0 /* MockWebservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E762322602474600D543C0 /* MockWebservice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +64,13 @@
 		524F87C72600D3D9007F339A /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		524F87CC2600D407007F339A /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		524F87D22601399F007F339A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		524F87DA26013A38007F339A /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		524F87DA26013A38007F339A /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
 		524F87ED260142B2007F339A /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		524F87F8260143E4007F339A /* CommentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListViewModel.swift; sourceTree = "<group>"; };
-		52E7618E2601E28200D543C0 /* DenemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenemeViewController.swift; sourceTree = "<group>"; };
+		52E7618E2601E28200D543C0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		52E761DD2601F33900D543C0 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		52E76227260230BC00D543C0 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		52E762322602474600D543C0 /* MockWebservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWebservice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +121,9 @@
 		524F87862600D138007F339A /* VirginMoney */ = {
 			isa = PBXGroup;
 			children = (
-				524F87EC26014214007F339A /* ViewModel */,
 				524F87872600D138007F339A /* AppDelegate.swift */,
 				524F87892600D138007F339A /* SceneDelegate.swift */,
+				524F87EC26014214007F339A /* ViewModel */,
 				524F87E8260140B8007F339A /* View */,
 				524F87DF26013CAE007F339A /* ViewController */,
 				524F87D126013971007F339A /* Utulity */,
@@ -160,7 +166,8 @@
 			children = (
 				524F87C72600D3D9007F339A /* Error.swift */,
 				524F87CC2600D407007F339A /* WebService.swift */,
-				524F87DA26013A38007F339A /* Service.swift */,
+				524F87DA26013A38007F339A /* CommentService.swift */,
+				52E762322602474600D543C0 /* MockWebservice.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -169,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				524F87D22601399F007F339A /* Constants.swift */,
+				52E76227260230BC00D543C0 /* String+Extension.swift */,
 			);
 			path = Utulity;
 			sourceTree = "<group>";
@@ -177,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				524F878B2600D138007F339A /* MainViewController.swift */,
-				52E7618E2601E28200D543C0 /* DenemeViewController.swift */,
+				52E7618E2601E28200D543C0 /* DetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -187,6 +195,7 @@
 			children = (
 				524F878D2600D138007F339A /* Main.storyboard */,
 				524F87922600D13C007F339A /* LaunchScreen.storyboard */,
+				52E761DD2601F33900D543C0 /* CommentTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,13 +339,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52E7618F2601E28200D543C0 /* DenemeViewController.swift in Sources */,
+				52E7618F2601E28200D543C0 /* DetailViewController.swift in Sources */,
 				524F87EE260142B2007F339A /* CommentViewModel.swift in Sources */,
+				52E762332602474600D543C0 /* MockWebservice.swift in Sources */,
 				524F87CD2600D407007F339A /* WebService.swift in Sources */,
 				524F87F9260143E4007F339A /* CommentListViewModel.swift in Sources */,
-				524F87DB26013A38007F339A /* Service.swift in Sources */,
+				524F87DB26013A38007F339A /* CommentService.swift in Sources */,
 				524F878C2600D138007F339A /* MainViewController.swift in Sources */,
+				52E76228260230BC00D543C0 /* String+Extension.swift in Sources */,
 				524F87882600D138007F339A /* AppDelegate.swift in Sources */,
+				52E761DE2601F33900D543C0 /* CommentTableViewCell.swift in Sources */,
 				524F878A2600D138007F339A /* SceneDelegate.swift in Sources */,
 				524F87D32601399F007F339A /* Constants.swift in Sources */,
 				524F87C82600D3D9007F339A /* Error.swift in Sources */,

@@ -9,25 +9,74 @@ import XCTest
 @testable import VirginMoney
 
 class VirginMoneyTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testVirginMoneyTests_WhenRealWebServiceCalled_ShouldMoreThanZero()  {
+        
+        let expectation = self.expectation(description: "WaitForWebService")
+        
+        let test = CommentService(Webservice())
+        
+        var commentResultCount : Int = 0
+        
+        test.getAllComments(completion: { result in
+            
+            switch result {
+            case .success(let comments):
+                commentResultCount = comments.count
+            case .failure( _):
+                commentResultCount = 0
+            }
+            expectation.fulfill()
         }
+        )
+        
+        waitForExpectations(timeout: 2, handler: nil)
+        XCTAssertTrue(commentResultCount>0)
     }
-
+    
+    
+    func testVirginMoneyTests_WhenRealMocServiceCalled_ShouldMoreThanZero()  {
+        
+        let expectation = self.expectation(description: "WaitForWebService")
+        
+        let test = CommentService(MockWebservice())
+        
+        var commentResultCount : Int = 0
+        
+        test.getAllComments(completion: { result in
+            
+            switch result {
+            case .success(let comments):
+                commentResultCount = comments.count
+            case .failure( _):
+                commentResultCount = 0
+            }
+            expectation.fulfill()
+        }
+        )
+        
+        waitForExpectations(timeout: 2, handler: nil)
+        print("Heyy \(commentResultCount)")
+        XCTAssertTrue(commentResultCount>0)
+        
+    }
+    
+    func testVirginMoneyTests_WhenCommentListViewModelInit_ShouldReturnFirstLineOfTheComment()  {
+        
+        let expectation = self.expectation(description: "WaitForWebService")
+        
+        let test = CommentService(MockWebservice())
+        
+        test.getAllComments(completion: { result in
+            expectation.fulfill()
+        }
+        )
+        
+        let commentListVM : ListViewModel? = CommentListViewModel(test)
+        waitForExpectations(timeout: 2, handler: nil)
+        
+        
+        XCTAssertEqual(commentListVM?.commentIndex(0)?.simpleFirtLineComment(), "FIRST_LINE")
+        
+    }
 }
