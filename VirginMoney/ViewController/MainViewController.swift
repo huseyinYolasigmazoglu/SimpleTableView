@@ -46,8 +46,6 @@ final class MainViewController: UIViewController,UITableViewDelegate {
     }
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,6 +60,10 @@ final class MainViewController: UIViewController,UITableViewDelegate {
             commentListVM = CommentListViewModel(service)
         }
         commentListVM?.delegate = self
+        tableView.tableFooterView = UIView()
+        
+        //tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 185
         
     }
     
@@ -76,9 +78,12 @@ extension MainViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as? CommentTableViewCell else {
+            
+            fatalError("CommentCell not Found")
+        }
         
-        cell.textLabel?.text = commentListVM?.commentIndex(indexPath.row)?.name()
+        cell.configure(commentListVM?.commentIndex(indexPath.row) )
         
         return cell
     }

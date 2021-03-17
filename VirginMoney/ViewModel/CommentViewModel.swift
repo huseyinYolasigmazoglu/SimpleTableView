@@ -11,6 +11,7 @@ protocol CellViewModel {
     
     func name() -> String
     func email() -> String
+    func theComment() -> String
 }
 
 
@@ -30,6 +31,10 @@ struct CommentViewModel : CellViewModel {
     
     func email() -> String {
         return comment.email ?? ""
+    }
+    func theComment() -> String {
+        
+        return comment.comment ?? ""
     }
     
 }

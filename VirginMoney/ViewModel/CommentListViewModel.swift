@@ -39,7 +39,6 @@ class CommentListViewModel : ListViewModel {
         
         self.service.getAllComments { [weak self] result in
             
-            print(result)
             switch result {
             case .success(let comment):
                 self?.initViewModelList(comment)
