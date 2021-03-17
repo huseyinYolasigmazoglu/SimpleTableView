@@ -43,6 +43,7 @@ final class CommentListViewModel : ListViewModel {
             case .success(let comment):
                 self?.initViewModelList(comment)
                 self?.refresh()
+                print("Success XXX")
             case .failure(_):
                 print("Error")
             }

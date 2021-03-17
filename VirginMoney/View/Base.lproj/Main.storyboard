@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mHi-Ps-8Oj">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mHi-Ps-8Oj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CommentCell" rowHeight="158" id="nLb-Gv-bYe" customClass="CommentTableViewCell" customModule="VirginMoney" customModuleProvider="target">
@@ -82,6 +81,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mHi-Ps-8Oj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CMG-JB-5i2"/>
+                            <constraint firstItem="mHi-Ps-8Oj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ide-am-DAg"/>
+                            <constraint firstItem="mHi-Ps-8Oj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k5N-cs-OT3"/>
+                            <constraint firstItem="mHi-Ps-8Oj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mE9-Ph-Khp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jOd-rS-1zB"/>
                     <connections>

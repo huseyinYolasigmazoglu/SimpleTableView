@@ -40,7 +40,7 @@ final class MainViewController: UIViewController,UITableViewDelegate {
             if  let service = _service {
                 return service
             }else{
-                return Service(webService) //if nil default value
+                return CommentService(webService) //if nil default value
             }
         }
     }
@@ -61,7 +61,6 @@ final class MainViewController: UIViewController,UITableViewDelegate {
             commentListVM = CommentListViewModel(service)
         }
         commentListVM?.delegate = self
-        tableView.tableFooterView = UIView()
         
     }
     

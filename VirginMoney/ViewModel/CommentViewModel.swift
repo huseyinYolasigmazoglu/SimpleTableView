@@ -13,6 +13,7 @@ protocol CellViewModel {
     func email() -> NSAttributedString
     func fullComment() -> NSAttributedString
     func firstLineOfComment() -> NSAttributedString
+    func simpleFirtLineComment() -> String 
 }
 
 
@@ -37,6 +38,11 @@ final class CommentViewModel : CellViewModel {
         return "\(email) \(comment.email ?? "")".withBoldText(text: email)
         
     }
+    func simpleFirtLineComment() -> String {
+        
+        return comment.comment?.stringBefore("\n") ?? ""
+    }
+    
     func fullComment() -> NSAttributedString {
         
         let com = "COMMENT:"

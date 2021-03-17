@@ -14,7 +14,7 @@ protocol IService {
     func getAllComments(completion: @escaping (Result<[Comment], NetworkError>) -> ())
 }
 
-final class Service: IService {
+final class CommentService: IService {
     
     var baseEndPoint : String
     
