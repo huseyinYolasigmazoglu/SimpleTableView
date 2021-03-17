@@ -22,14 +22,13 @@ final class MockWebservice : IWebservice {
         }
         ]
         """
-
+        
         let data = string.data(using: .utf8)!
         
         DispatchQueue.main.async {
             completion(resource.parse(data))
         }
     }
-    
 }
 
 
